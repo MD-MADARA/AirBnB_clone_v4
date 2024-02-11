@@ -60,13 +60,30 @@ button:hover {
     padding-bottom: 15px;
     height: 300px;
     overflow-y: scroll;
-    scrollbar-width: none;
     max-height: 300px;
 }
 
-.popover::-webkit-scrollbar{
-    width: 0px;
-}
+/* width */
+::-webkit-scrollbar {
+    border-radius: 5px;
+    width: 9px;
+  }
+  
+  /* Track */
+  /* ::-webkit-scrollbar-track {
+    background: #AAA; 
+  } */
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: #CCC; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
 
 .amenities .popover {
     padding: 10px 0;
