@@ -1,0 +1,2 @@
+#!/bin/bash
+mysql -uroot -p < setup_mysql_dev.sql

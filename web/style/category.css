@@ -1,0 +1,28 @@
+/* Category Start */
+.category-card{
+    border: 1px solid #ddd;
+    box-shadow: 0 0.125rem 0.25rem rgba(84, 83, 83, 0.934);
+    margin-bottom: 100px;
+    background-color: #fff;
+    margin-right: 10px;
+}
+.category-card a{
+    text-decoration: none;
+}
+.category-card .category-card-img{
+    max-height: 260px;
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+}
+.category-card .category-card-body{
+    padding: 10px 16px;
+}
+.category-card .category-card-body h5{
+    margin-bottom: 0px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; ;
+}
+/* Category End */
