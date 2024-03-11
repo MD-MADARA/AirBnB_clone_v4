@@ -1,5 +1,5 @@
 function addToCartePopUp(product_id) {
-  fetch('http://web-02.madaralx.tech/api/products/' + product_id)
+  fetch('https://web-01.madaralx.tech/api/products/' + product_id)
     .then(response => {
         if (!response.ok) { 
           throw new Error('Network response was not ok');
@@ -128,7 +128,7 @@ function addToCartePopUp(product_id) {
             const user_id = localStorage.getItem('id');
             if (user_id) {
               const data = {"product_id": p_id};
-              fetch(`http://web-02.madaralx.tech/api/users/${user_id}/cart/`, {
+              fetch(`https://web-01.madaralx.tech/api/users/${user_id}/cart/`, {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json'
