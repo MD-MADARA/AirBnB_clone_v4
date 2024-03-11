@@ -2,46 +2,95 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Our Team Section</title>
+	<title>Our Team</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../static/styles/aboutus.css?{{ cache_id }}">
-  <link rel="stylesheet" href="../static/styles/footer.css?{{ cache_id }}">
-  <link rel="stylesheet" href="../static/styles/nav.css?{{ cache_id }}">
+	<link rel="stylesheet" href="../static/styles/nav.css?{{ cache_id }}">
+	<link rel="stylesheet" href="../static/styles/footer.css?{{ cache_id }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://font.googleapis.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link rel="icon" href="../static/images/logo.ico" type="image/x-icon">
+  <script src="https://kit.fontawesome.com/dd9af7210e.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav></nav>
+  <nav></nav>
+  <section id="team">
+    <h1 class="heading">
+        <i class="fas fa-rocket"></i><strong>Our Team</strong>
+    </h1>
+    <div class="container">
+        <div class="box">
+            <div class="top-bar"></div>
+                <div class="nav">
+                    <i class="verify fas fa-check-circle"></i>
+                    <input type="checkbox" class="heart-btn" id="heart-btn">
+                    <label  class="heart"></label>
+                </div>
 
-<div class="wrapper">
-  <h1>Our Team</h1>
-  <div class="team">
-    <div class="team_member">
-      <div class="team_img">
-        <img src="../static/images/about_us/ouail.jpg" alt="Team_image">
-      </div>
-      <h3>Ouail Berramou</h3>
-      <p class="role">Full stack developer & DevOps</p>
-      <p>Full Stack Developer with DevOps experience excels in front-end and back-end web development.</p>
+                <div class="details">
+                    <img src="../static/images/about_us/mouad.jpeg" alt="">
+                    <strong>Mouad Khanouch</strong>
+                    <p>mouadmouadkhanouch@gmail.com</p>
+                </div>
+
+                <div class="btn">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        <div class="box">
+            <div class="top-bar"></div>
+                <div class="nav">
+                    <i class="verify fas fa-check-circle"></i>
+                    <input type="checkbox" class="heart-btn" id="heart-btn">
+                    <label  class="heart"></label>
+                </div>
+
+                <div class="details">
+                    <img src="../static/images/about_us/fatima-z.jpeg" alt="">
+                    <strong>Fatima ez-zahra Kouirs</strong>
+                    <p>berlinefatima@gmail.com</p>
+                </div>
+
+                <div class="btn">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+              </div>
+        <div class="box">
+            <div class="top-bar"></div>
+                <div class="nav">
+                    <i class="verify fas fa-check-circle"></i>
+                    <input type="checkbox" class="heart-btn" id="heart-btn">
+                    <label  class="heart"></label>
+                </div>
+
+                <div class="details">
+                    <img src="../static/images/about_us/ouail.jpg" alt="">
+                    <strong>Ouail Berramou</strong>
+                    <p>adomeyou@gmail.com</p>
+                </div>
+
+                <div class="btn">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+        </div>
     </div>
-    <div class="team_member">
-      <div class="team_img">
-        <img src="../static/images/about_us/fatima-ezzahra.jpg" alt="Team_image">
-      </div>
-      <h3>Fatima ez_zahra kouirs</h3>
-      <p class="role">Full stack developer & DevOps</p>
-      <p>Full Stack Developer with DevOps experience excels in front-end and back-end web development.</p>
-    </div>
-    <div class="team_member">
-      <div class="team_img">
-        <img src="../static/images/about_us/mouad.jpg" alt="Team_image">
-      </div>
-      <h3>Mouad Khanouch</h3>
-      <p class="role">Full stack developer & DevOps</p>
-      <p>Full Stack Developer with DevOps experience excels in front-end and back-end web developmentt.</p>
-    </div>
-  </div>
-</div>
- <footer id="footer"></footer>
- <script src="../static/scripts/nav.js"></script>
-<script src="../static/scripts/footer.js"></script>
+  </section>
+  <footer id="footer"></footer>
+  <script src="../static/scripts/nav.js"></script>
+  <script src="../static/scripts/footer.js"></script>
 
 </body>
 
