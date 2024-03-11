@@ -17,6 +17,7 @@ a{
   flex-direction: column;
   font-family: "Poppins", sans-serif;
   background-color: #f8f8f8;
+  margin-top: 85px;
 }
 
 #team .heading {

@@ -242,6 +242,7 @@ document.addEventListener("DOMContentLoaded", function() {
                   wrp.appendChild(checkout_btn);
                   indicator.innerText = data.total;
                   addBtn.removeEventListener("click", addItem);
+                  checkout_btn.addEventListener("click", checkoutPage);
                 })
                 .catch(error => {
                   //

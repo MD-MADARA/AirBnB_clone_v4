@@ -1,3 +1,6 @@
+function checkoutPage() {
+    window.open("/checkout", "_blank");
+}
 document.addEventListener("DOMContentLoaded", function() {
     const nav = document.querySelector('nav');
     nav.innerHTML =
@@ -134,6 +137,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 wrp.appendChild(productDiv);
             });
             wrp.appendChild(checkout_btn);
+            checkout_btn.addEventListener("click", checkoutPage);
         })
         .catch(error => {
             // 
@@ -142,5 +146,5 @@ document.addEventListener("DOMContentLoaded", function() {
         profile.innerHTML = `
         <a href="/login"><img src="../static/images/profile-avatar.png" alt="avatar" class="avatar"/></a>`
     }
-
+    
 });

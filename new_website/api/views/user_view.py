@@ -63,9 +63,6 @@ def post_user():
         return make_response(jsonify({"description":"Missing email"}), 400)
     if 'password' not in data:
         return make_response(jsonify({"description":"Missing password"}), 400)
-    password = data.get("password")
-    if len(password) < 8:
-        return make_response(jsonify({"description":"Password must be 8 characters at least"}), 400)
 
     if 'first_name' not in data:
         return make_response(jsonify({"description":"Missing first_name"}), 400)
@@ -81,6 +78,10 @@ def post_user():
     if storage.get_user_by_email(data.get("email")):
         #if user aleready exists
         return make_response(jsonify({"description":"Email already exists"}), 400)
+    password = data.get("password")
+    if len(password) < 8:
+        return make_response(jsonify({"description":"Password must be 8 characters at least"}), 400)
+
 
 
     instance = User(**data)
@@ -89,7 +90,7 @@ def post_user():
     cart.save()
     instance.cart_id = cart.id
     instance.save()
-    return make_response(jsonify({"description":"user created"}), 201)
+    return make_response(jsonify({"description":"successfully registered"}), 201)
 
 
 @app_views.route('/users/<user_id>', methods=['PUT'], strict_slashes=False)
