@@ -23,27 +23,28 @@ function createProductDiv(product) {
     document.querySelector('.products').appendChild(productDiv);
 }
 
-
-const categories = ["Sweater", "Jeans", "T-shirt", "Suit", "Dress"]
-categories.forEach(category => {
-  const types = ["Men", "Women"]
-  types.forEach(type => {
-    let url =`https://www.madaralx.tech/api/products/${type}/${category}?order_desc=id&limit=10`
-    fetch(url)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.json();
-    })
-    .then(data => {
-      data.forEach(product => {
-        createProductDiv(product);
+document.addEventListener("DOMContentLoaded", function() {
+  const categories = ["Sweater", "Jeans", "T-shirt", "Suit", "Dress"]
+  categories.forEach(category => {
+    const types = ["Men", "Women"]
+    types.forEach(type => {
+      let url =`https://www.madaralx.tech/api/products/${type}/${category}?order_desc=id&limit=10`
+      fetch(url)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        data.forEach(product => {
+          createProductDiv(product);
+        });
+      })
+      .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+        document.getElementById('result').textContent = 'Error: ' + error;
       });
-    })
-    .catch(error => {
-      console.error('There was a problem with the fetch operation:', error);
-      document.getElementById('result').textContent = 'Error: ' + error;
     });
   });
 });
