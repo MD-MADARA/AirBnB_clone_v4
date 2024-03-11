@@ -28,7 +28,7 @@ const categories = ["Sweater", "Jeans", "T-shirt", "Suit", "Dress"]
 categories.forEach(category => {
   const types = ["Men", "Women"]
   types.forEach(type => {
-    let url =`https://web-01.madaralx.tech/api/products/${type}/${category}?order_desc=id&limit=10`
+    let url =`https://www.madaralx.tech/api/products/${type}/${category}?order_desc=id&limit=10`
     fetch(url)
     .then(response => {
       if (!response.ok) {

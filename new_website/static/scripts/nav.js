@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function() {
         profile.innerHTML = `
         <a href="/profile"><img src="../static/images/profile-logo-active.png" alt="avatar" class="avatar"/></a>`
         // cart
-        fetch(`https://web-01.madaralx.tech/api/users/${userid}/cart`)
+        fetch(`https://www.madaralx.tech/api/users/${userid}/cart`)
         .then(response => {
             return response.json();
         })
@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <p><span>$${new_price.toFixed(2)}</span> × <span class="number">${amountValue}</span> <b>$${total.toFixed(2)}</b></p>
                     </div>
                     <button class="delete-btn" onclick="
-                        fetch('https://web-01.madaralx.tech/api/users/${userid}/cart/${product.id}', {method: 'DELETE'})
+                        fetch('https://www.madaralx.tech/api/users/${userid}/cart/${product.id}', {method: 'DELETE'})
                         .then(response => {
                             return response.json();
                         })

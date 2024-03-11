@@ -9,7 +9,7 @@ function handleSubmit(event){
     console.log("data", data)
     let jsonData = JSON.stringify(data);
 
-    fetch('https://web-01.madaralx.tech/api/users',{
+    fetch('https://www.madaralx.tech/api/users',{
     method: 'POST',
     headers: {
         'Content-type' : 'application/json'
@@ -19,7 +19,7 @@ function handleSubmit(event){
     .then(result => {
         // alert(result.description);
         if (result.description == "user created") {
-            fetch(`https://web-01.madaralx.tech/api/users/${user_id}/orders/`,{
+            fetch(`https://www.madaralx.tech/api/users/${user_id}/orders/`,{
                 method: 'POST'})
                 .then(res => res.json())
                 .catch(err => console.log(err))
