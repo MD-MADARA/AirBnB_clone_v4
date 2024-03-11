@@ -19,7 +19,7 @@ a{
   background-color: #f8f8f8;
 }
 
-.heading {
+#team .heading {
   font-size: 1.3rem;
   color: #2c2c2c;
   font-weight: 500;
@@ -28,7 +28,7 @@ a{
   margin: 20px;
 }
 
-.heading i{
+#team .heading i{
   background-color: #333;
   color: #fff;
   width: 50px;
@@ -76,25 +76,25 @@ a{
    color: #333;
 }
 
-.nav{
+.navig{
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
 
-.nav .heart{
+.navig .heart{
  color: rgba(155,155,155);
 }
 
-.nav .heart:before {
+.navig .heart:before {
   content: '\f004';
   font-family: fontAwesome;
   line-height: 30px;
   z-index: 1;
   cursor: pointer;
 }
-.nav .heart-btn{
+.navig .heart-btn{
   display: none;
 }
 

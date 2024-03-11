@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 alt="close"
                 class="close-btn hidden-btn"
                 />
-                <a href ="#"><li class="nav_link">Collections</li></a>
+                <a href ="/home"><li class="nav_link">Home</li></a>
                 <a href ="/men"><li class="nav_link">Men</li></a>
                 <a href ="/women"><li class="nav_link">Women</li></a>
                 <a href ="/about"><li class="nav_link">About</li></a>
