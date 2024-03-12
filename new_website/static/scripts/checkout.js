@@ -36,7 +36,7 @@ function createProductRow(product) {
 }
 document.addEventListener("DOMContentLoaded", function() {
     const userid = localStorage.getItem('id');
-    fetch(`https://www.madaralx.tech/api/users/${userid}/cart`)
+    fetch(`https://fashionalx.me/api/users/${userid}/cart`)
     .then(response => {
       return response.json();
     })

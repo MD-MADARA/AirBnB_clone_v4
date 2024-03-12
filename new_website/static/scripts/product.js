@@ -1,5 +1,5 @@
 function Simular_products(p_ctgName, p_ctgType, from, p_id) {
-  fetch(`https://www.madaralx.tech/api/products/${p_ctgType}/${p_ctgName}?from=${from}&ignore=${p_id}&limit=15&order_desc=id`)
+  fetch(`https://fashionalx.me/api/products/${p_ctgType}/${p_ctgName}?from=${from}&ignore=${p_id}&limit=15&order_desc=id`)
   .then(response => {
     if (!response.ok) {
       throw new Error('Network response was not ok');
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let product_id = path.split('product/').pop();
     
     
-    fetch('https://www.madaralx.tech/api/products/' + product_id)
+    fetch('https://fashionalx.me/api/products/' + product_id)
     .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -184,7 +184,7 @@ document.addEventListener("DOMContentLoaded", function() {
               const user_id = localStorage.getItem('id');
               if (user_id) {
                 const data = {"product_id": p_id};
-                fetch(`https://www.madaralx.tech/api/users/${user_id}/cart/`, {
+                fetch(`https://fashionalx.me/api/users/${user_id}/cart/`, {
                   method: 'POST',
                   headers: {
                     'Content-Type': 'application/json'
@@ -220,7 +220,7 @@ document.addEventListener("DOMContentLoaded", function() {
                           <p><span>$${new_price.toFixed(2)}</span> × <span class="number">${amountValue}</span> <b>$${total.toFixed(2)}</b></p>
                       </div>
                       <button class="delete-btn" onclick="
-                          fetch('https://www.madaralx.tech/api/users/${user_id}/cart/${p_id}', {method: 'DELETE'})
+                          fetch('https://fashionalx.me/api/users/${user_id}/cart/${p_id}', {method: 'DELETE'})
                           .then(response => {
                               return response.json();
                           })

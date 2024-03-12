@@ -1,5 +1,5 @@
 function addToCartePopUp(product_id) {
-  fetch('https://www.madaralx.tech/api/products/' + product_id)
+  fetch('https://fashionalx.me/api/products/' + product_id)
     .then(response => {
         if (!response.ok) { 
           throw new Error('Network response was not ok');
@@ -128,7 +128,7 @@ function addToCartePopUp(product_id) {
             const user_id = localStorage.getItem('id');
             if (user_id) {
               const data = {"product_id": p_id};
-              fetch(`https://www.madaralx.tech/api/users/${user_id}/cart/`, {
+              fetch(`https://fashionalx.me/api/users/${user_id}/cart/`, {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json'

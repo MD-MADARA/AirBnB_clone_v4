@@ -28,11 +28,11 @@ document.addEventListener("DOMContentLoaded", function() {
   // categories.forEach(category => {
   //   const types = ["Men", "Women"]
   //   types.forEach(type => {
-  //     let url =`https://www.madaralx.tech/api/products/${type}/${category}?order_desc=id&limit=10`
+  //     let url =`https://fashionalx.me/api/products/${type}/${category}?order_desc=id&limit=10`
   //     //
   //   });
   // });
-  fetch(`https://www.madaralx.tech/api/products?order_desc=id&limit=20`)
+  fetch(`https://fashionalx.me/api/products?order_desc=id&limit=20`)
   .then(response => {
     if (!response.ok) {
       throw new Error('Network response was not ok');

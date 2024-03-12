@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("data", data)
         let jsonData = JSON.stringify(data);
 
-        fetch('https://www.madaralx.tech/api/users',{
+        fetch('https://fashionalx.me/api/users',{
         method: 'POST',
         headers: {
             'Content-type' : 'application/json'
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
             alert(result.description);
             if (result.description == "successfully registered") {
                 window.location.replace("/login");
-                fetch(`https://www.madaralx.tech/api/users/${user_id}/orders/`,{
+                fetch(`https://fashionalx.me/api/users/${user_id}/orders/`,{
                     method: 'POST'})
                 .then(res => res.json())
                 .catch(err => console.log(err))

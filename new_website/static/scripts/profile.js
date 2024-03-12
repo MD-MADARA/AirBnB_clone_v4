@@ -5,7 +5,7 @@ function logout() {
 }
 document.addEventListener("DOMContentLoaded", function() {
     const user_id = localStorage.getItem('id');
-    fetch(`https://www.madaralx.tech/api/users/${user_id}`)
+    fetch(`https://fashionalx.me/api/users/${user_id}`)
     .then(res => res.json())
     .then(user => {
         document.querySelector(".user-details").innerHTML = 

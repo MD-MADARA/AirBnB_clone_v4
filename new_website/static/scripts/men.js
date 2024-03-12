@@ -23,7 +23,7 @@ function createProductDiv(product) {
       document.querySelector('.products').appendChild(productDiv);
   }
   
-fetch('https://www.madaralx.tech/api/products?category_type=Men&order_desc=id')
+fetch('https://fashionalx.me/api/products?category_type=Men&order_desc=id')
 .then(response => {
   if (!response.ok) {
     throw new Error('Network response was not ok');

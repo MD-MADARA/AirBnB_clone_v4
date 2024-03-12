@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("data", data)
         let jsonData = JSON.stringify(data);
 
-        fetch('https://www.madaralx.tech/api/login',{
+        fetch('https://fashionalx.me/api/login',{
         method: 'POST',
         headers: {
             'Content-type' : 'application/json'
