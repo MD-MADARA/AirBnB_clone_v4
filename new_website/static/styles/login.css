@@ -44,15 +44,22 @@ img {
 }
 
 /* =======Login-Styling========= */
-.login-page {
+.login-page,
+.signup-page {
     width: 100%;
-    height: 120vh;
-    background-image: url("../images/banner-3.png");
     background-position: center;
     background-size: cover;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     align-items: center;
+}
+.login-page {
+    background-image: url("../images/login-bg.jpg");
+    height: 100vh;
+}
+.signup-page {
+    background-image: url("../images/signup-bg.jpg");
+    height: 115vh;
 }
 .login {
     position: relative;
@@ -192,16 +199,17 @@ img {
 }
 
 .login-button:hover {
-    background-color: rgba(87, 238, 11, 0.678);
+    background-color: #77928F;
     transition: all 0.1s ease-out;
 }
 
 .login-register {
+    font-size: medium;
     text-align: center;
 }
 .login-register a {
     font-weight: var(--font-weight);
-    color: var(--white-color);
+    color:  white;
 }
 .login-register a:hover {
     text-decoration: underline;

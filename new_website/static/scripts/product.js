@@ -115,8 +115,34 @@ document.addEventListener("DOMContentLoaded", function() {
           </div>
           <p class="old-price">$${p_price.toFixed(2)}</p>
         </div>
+        <form class="size-selector">
+          <div class="size-option">
+            <input type="radio" id="size-xs" name="size" value="XS">
+            <label for="size-xs">XS</label>
+          </div>
+          <div class="size-option">
+            <input type="radio" id="size-s" name="size" value="S">
+            <label for="size-s">S</label>
+          </div>
+          <div class="size-option">
+            <input type="radio" id="size-m" name="size" value="M">
+            <label for="size-m">M</label>
+          </div>
+          <div class="size-option">
+            <input type="radio" id="size-l" name="size" value="L">
+            <label for="size-l">L</label>
+          </div>
+          <div class="size-option">
+            <input type="radio" id="size-xl" name="size" value="XL">
+            <label for="size-xl">XL</label>
+          </div>
+          <div class="size-option">
+            <input type="radio" id="size-xxl" name="size" value="XXL">
+            <label for="size-xxl">XXL</label>
+          </div>
+        </form>
         <div class="buttons">
-          <div class="amount-btn">
+        <!--<div class="amount-btn">
             <button id="minus">
               <img src="../static/images/icon-minus.svg" alt="minus" />
             </button>
@@ -124,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function() {
             <button id="plus">
               <img src="../static/images/icon-plus.svg" alt="plus" />
             </button>
-          </div>
+          </div>-->
           <button class="add_btn">
             <img src="../static/images/icon-cart.svg" alt="cart" />
             Add to cart
@@ -133,9 +159,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
         const mainThumbnail = document.querySelector(".main-thumbnail");
         const images = document.querySelectorAll(".preview img");
-        const plusBtn = document.querySelector("#plus");
-        const minusBtn = document.querySelector("#minus");
-        const amount = document.querySelector(".amount");
+        // const plusBtn = document.querySelector("#plus");
+        // const minusBtn = document.querySelector("#minus");
+        // const amount = document.querySelector(".amount");
         const nextBtn = document.getElementById("next");
         const prevBtn = document.getElementById("previous");
         const thumbMob = document.querySelector(".thumb-mob");
@@ -144,22 +170,22 @@ document.addEventListener("DOMContentLoaded", function() {
         const cart = document.querySelector(".cart-wrp");
         const wrp = document.querySelector(".cart-content");
         const more = document.querySelector(".show-more");
-        let amountValue = 0;
+        let amountValue = 1;
         let currentImg = 1;
 
         // indicator.style.display = "none";
     
-        function handlePlus() {
-        amountValue++;
-        amount.innerText = amountValue;
-        }
+        // function handlePlus() {
+        // amountValue++;
+        // amount.innerText = amountValue;
+        // }
 
-        function handleMinus() {
-        if (amountValue > 0) {
-            amountValue--;
-        }
-        amount.innerText = amountValue;
-        }
+        // function handleMinus() {
+        // if (amountValue > 0) {
+        //     amountValue--;
+        // }
+        // amount.innerText = amountValue;
+        // }
 
         function nextImage() {
             if (currentImg == 4) {
@@ -302,8 +328,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             });
         });
-        plusBtn.addEventListener("click", handlePlus);
-        minusBtn.addEventListener("click", handleMinus);
+        // plusBtn.addEventListener("click", handlePlus);
+        // minusBtn.addEventListener("click", handleMinus);
         nextBtn.addEventListener("click", nextImage);
         prevBtn.addEventListener("click", prevImage);
         addBtn.addEventListener("click", addItem);

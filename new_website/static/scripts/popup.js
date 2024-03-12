@@ -50,16 +50,42 @@ function addToCartePopUp(product_id) {
           </div>
           <p class="old-price">$${p_price.toFixed(2)}</p>
         </div>
-        <div class="buttons">
-          <div class="amount-btn">
-            <button id="minus">
-              <img src="../static/images/icon-minus.svg" alt="minus" />
-            </button>
-            <p class="amount">0</p>
-            <button id="plus">
-              <img src="../static/images/icon-plus.svg" alt="plus" />
-            </button>
+        <form class="size-selector">
+          <div class="size-option">
+            <input type="radio" id="popup-size-xs" name="option" value="XS">
+            <label for="popup-size-xs">XS</label>
           </div>
+          <div class="size-option">
+            <input type="radio" id="popup-size-s" name="option" value="S">
+            <label for="popup-size-s">S</label>
+          </div>
+          <div class="size-option">
+            <input type="radio" id="popup-size-m" name="option" value="M">
+            <label for="popup-size-m">M</label>
+          </div>
+          <div class="size-option">
+            <input type="radio" id="popup-size-l" name="option" value="L">
+            <label for="popup-size-l">L</label>
+          </div>
+          <div class="size-option">
+            <input type="radio" id="popup-size-xl" name="option" value="XL">
+            <label for="popup-size-xl">XL</label>
+          </div>
+          <div class="size-option">
+            <input type="radio" id="popup-size-xxl" name="option" value="XXL">
+            <label for="popup-size-xxl">XXL</label>
+          </div>
+        </form>
+        <div class="buttons">
+        <!--<div class="amount-btn">
+        <button id="minus">
+          <img src="../static/images/icon-minus.svg" alt="minus" />
+        </button>
+        <p class="amount">0</p>
+        <button id="plus">
+          <img src="../static/images/icon-plus.svg" alt="plus" />
+        </button>
+        </div>-->
           <button class="add_btn">
             <img src="../static/images/icon-cart.svg" alt="cart" />
             Add to cart
@@ -71,29 +97,29 @@ function addToCartePopUp(product_id) {
 
         const mainThumbnail = document.querySelector(".products-preview .main-thumbnail");
         const images = document.querySelectorAll(".products-preview .preview img");
-        const plusBtn = document.querySelector(".products-preview #plus");
-        const minusBtn = document.querySelector(".products-preview #minus");
-        const amount = document.querySelector(".products-preview .amount");
+        // const plusBtn = document.querySelector(".products-preview #plus");
+        // const minusBtn = document.querySelector(".products-preview #minus");
+        // const amount = document.querySelector(".products-preview .amount");
         const addBtn = document.querySelector(".products-preview .add_btn");
         const indicator = document.querySelector(".indicator");
         const wrp = document.querySelector(".cart-content");
         const cart = document.querySelector(".cart-wrp");
-        let amountValue = 0;
+        let amountValue = 1;
 
 
         indicator.style.display = "none";
     
-        function handlePlus() {
-        amountValue++;
-        amount.innerText = amountValue;
-        }
+        // function handlePlus() {
+        // amountValue++;
+        // amount.innerText = amountValue;
+        // }
 
-        function handleMinus() {
-        if (amountValue > 0) {
-            amountValue--;
-        }
-        amount.innerText = amountValue;
-        }
+        // function handleMinus() {
+        // if (amountValue > 0) {
+        //     amountValue--;
+        // }
+        // amount.innerText = amountValue;
+        // }
         // function addItem() {
         //     if (amountValue > 0) {
         //         let total = new_price * amountValue;
@@ -202,8 +228,8 @@ function addToCartePopUp(product_id) {
             preveiwContainer.classList.add("hidden");
           }, 300);
         };
-        plusBtn.addEventListener("click", handlePlus);
-        minusBtn.addEventListener("click", handleMinus);
+        // plusBtn.addEventListener("click", handlePlus);
+        // minusBtn.addEventListener("click", handleMinus);
         addBtn.addEventListener("click", addItem);
         closePopup.addEventListener("click", closeProductPreview);
     })

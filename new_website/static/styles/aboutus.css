@@ -42,8 +42,8 @@ a{
 }
 
 .box{
-  width: 266px;
-  height: 340px;
+  width: 290px;
+  height: 360px;
   background-color: #fff;
   display: flex;
   flex-direction: column;

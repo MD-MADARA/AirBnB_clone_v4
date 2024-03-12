@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
         <div class="second-info">
             <h4>Support</h4>
             <p>Contact us</p>
-            <p>About page</p>
+            <a href="/about"><p>About page</p></a>
             <p>Size Guide</p>
             <p>Shoping & Resturns </p>
             <p>Privacy</p>

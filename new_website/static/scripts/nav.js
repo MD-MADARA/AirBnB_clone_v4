@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 </div>
             </div>
             <div class="profile-logo"></div>
+            <span class="username"></span>
         </div>
     </div>`
 
@@ -81,6 +82,7 @@ document.addEventListener("DOMContentLoaded", function() {
     cartBtn.addEventListener("click", toggleCart);
     const userid = localStorage.getItem('id');
     const profile = document.querySelector(".profile-logo");
+    const username = document.querySelector(".username");
     if (userid) {
         profile.innerHTML = `
         <a href="/profile"><img src="../static/images/profile-logo-active.png" alt="avatar" class="avatar"/></a>`
@@ -140,11 +142,22 @@ document.addEventListener("DOMContentLoaded", function() {
             checkout_btn.addEventListener("click", checkoutPage);
         })
         .catch(error => {
-            // 
+            console.log(error)
+        });
+        //usenname
+        fetch(`https://fashionalx.me/api/users/${userid}`)
+        .then(response => {
+            return response.json();
+        })
+        .then(user => {
+            username.innerHTML = `${(user.first_name).toUpperCase()}<br/>${(user.last_name).toUpperCase()}`
+        })
+        .catch(error => {
+            console.log(error);
         });
     } else {
         profile.innerHTML = `
         <a href="/login"><img src="../static/images/profile-avatar.png" alt="avatar" class="avatar"/></a>`
     }
-    
+
 });
