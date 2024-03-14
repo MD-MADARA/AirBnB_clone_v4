@@ -15,6 +15,11 @@ def generate_mens_tshirt_title():
     suffix = fake.random_element(['T-shirt', 'Top', 'Shirt', 'Tee'])
     return f"{prefix} {suffix}"
 
+def generate_womens_tshirt_title():
+    prefix = fake.random_element(['Graphic', 'Striped', 'V-Neck', 'Crop', 'Scoop Neck'])
+    suffix = fake.random_element(['T-shirt', 'Top', 'Blouse'])
+    return f"{prefix} {suffix}"
+
 def generate_mens_sweater_title():
     prefix = fake.random_element(['Warm', 'Cozy', 'Stylish', 'Classic', 'Knit'])
     suffix = fake.random_element(['Sweater', 'Pullover', 'Knitwear', 'Jumper'])
@@ -38,6 +43,16 @@ def generate_mens_jeans_title():
 def generate_womens_dress_title():
     prefix = fake.random_element(['Elegant', 'Floral', 'Maxi', 'Wrap', 'A-Line'])
     suffix = fake.random_element(['Dress', 'Gown', 'Frock', 'Maxi', 'Tunic'])
+    return f"{prefix} {suffix}"
+    
+def generate_womens_sweater_title():
+    prefix = fake.random_element(['Cozy', 'Chunky', 'Cable-Knit', 'Turtleneck', 'Cardigan'])
+    suffix = fake.random_element(['Sweater', 'Pullover', 'Knit'])
+    return f"{prefix} {suffix}"
+
+def generate_mens_hoodie_title():
+    prefix = fake.random_element(['Zip-Up', 'Pullover', 'Graphic', 'Hooded', 'Fleece'])
+    suffix = fake.random_element(['Hoodie', 'Sweatshirt'])
     return f"{prefix} {suffix}"
 
 # 25 Men Short
@@ -79,8 +94,8 @@ for i in range(34):
     new = Product(**data)
     new.save()
 
-# 7 Men Sweater
-for i in range(7):
+# 8 Men Sweater
+for i in range(8):
     data = {
         "title": generate_mens_sweater_title(),
         "price": fake.pyfloat(min_value=5, max_value=60, right_digits=2),
@@ -88,19 +103,6 @@ for i in range(7):
         "discount": fake.random_int(min=25, max=65),
         "category_name": "Sweater",
         "category_type": "Men",
-    }
-    new = Product(**data)
-    new.save()
-
-# 1 Women Sweater
-for i in range(1):
-    data = {
-        "title": "Solid Ribbed Knit Sweater",
-        "price": 18.09,
-        "description": fake.text(),
-        "discount": 31,
-        "category_name": "Sweater",
-        "category_type": "Women",
     }
     new = Product(**data)
     new.save()
@@ -140,6 +142,80 @@ for i in range(27):
         "discount": fake.random_int(min=25, max=40),
         "category_name": "Dress",
         "category_type": "Women",
+    }
+    new = Product(**data)
+    new.save()
+
+# 80 Women Sweater
+for i in range(80):
+    data = {
+        "title": generate_womens_sweater_title(),
+        "price": fake.pyfloat(min_value=10, max_value=60, right_digits=2),
+        "description": fake.text(),
+        "discount": fake.random_int(min=25, max=45),
+        "category_name": "Sweater",
+        "category_type": "Women",
+    }
+    new = Product(**data)
+    new.save()
+
+
+ws1 = {
+    "title": "Solid Ribbed Knit Sweater",
+    "price": 18.09,
+    "description": fake.text(),
+    "discount": 31,
+    "category_name": "Sweater",
+    "category_type": "Women",
+}
+ws2 = {
+    "title": "Chunky Knit Sweater",
+    "price": 20.50,
+    "description": fake.text(),
+    "discount": 25,
+    "category_name": "Sweater",
+    "category_type": "Women",
+}
+data = [ws1, ws2]
+for d in data:
+    new = Product(**d)
+    new.save()
+
+# 68 women t-shirt
+for i in range(68):
+    data = {
+        "title": generate_womens_tshirt_title(),
+        "price": fake.pyfloat(min_value=5, max_value=60, right_digits=2),
+        "description": fake.text(),
+        "discount": fake.random_int(min=25, max=65),
+        "category_name": "T-shirt",
+        "category_type": "Women",
+    }
+    new = Product(**data)
+    new.save()
+
+# 53 Men Suit
+for i in range(53):
+    data = {
+        "title": generate_womens_suit_title(),
+        "price": fake.pyfloat(min_value=30, max_value=200, right_digits=2),
+        "description": fake.text(),
+        "discount": fake.random_int(min=30, max=75),
+        "category_name": "Suit",
+        "category_type": "Men",
+    }
+    new = Product(**data)
+    new.save()
+
+# 81 Men hoodie
+for i in range(81):
+    data = {
+        "title": generate_mens_hoodie_title(),
+        "price": fake.pyfloat(min_value=20, max_value=60, right_digits=2),
+        "description": fake.text(),
+        "discount": fake.random_int(min=30, max=75),
+        "category_name": "Hoodie",
+        "category_type": "Men",
     }
     new = Product(**data)
     new.save()
