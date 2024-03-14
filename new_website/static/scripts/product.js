@@ -320,7 +320,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     mainThumbnail.src = `../static/images/${p_ctgType}/${p_ctgName}/product_ID_${p_id}/img2.WEBP`;
                     break;
                 case `../static/images/${p_ctgType}/${p_ctgName}/product_ID_${p_id}/img3.WEBP`:
-                    mainThumbnail.src = `../static/images/${p_ctgType}/${p_ctgName}/product_ID_${p_id}/img1.WEBP`;
+                    mainThumbnail.src = `../static/images/${p_ctgType}/${p_ctgName}/product_ID_${p_id}/img3.WEBP`;
                     break;
                 case `../static/images/${p_ctgType}/${p_ctgName}/product_ID_${p_id}/img4.WEBP`:
                     mainThumbnail.src = `../static/images/${p_ctgType}/${p_ctgName}/product_ID_${p_id}/img4.WEBP`;
