@@ -142,15 +142,6 @@ document.addEventListener("DOMContentLoaded", function() {
           </div>
         </form>
         <div class="buttons">
-        <!--<div class="amount-btn">
-            <button id="minus">
-              <img src="../static/images/icon-minus.svg" alt="minus" />
-            </button>
-            <p class="amount">0</p>
-            <button id="plus">
-              <img src="../static/images/icon-plus.svg" alt="plus" />
-            </button>
-          </div>-->
           <button class="add_btn">
             <img src="../static/images/icon-cart.svg" alt="cart" />
             Add to cart

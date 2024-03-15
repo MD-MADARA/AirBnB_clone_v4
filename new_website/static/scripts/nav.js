@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 class="close-btn hidden-btn"
                 />
                 <a href ="/home"><li class="nav_link">Home</li></a>
-                <a href ="/men"><li class="nav_link">Men</li></a>
-                <a href ="/women"><li class="nav_link">Women</li></a>
+                <a href ="/men"><li class="nav_link">Men's</li></a>
+                <a href ="/women"><li class="nav_link">Women's</li></a>
                 <a href ="/about"><li class="nav_link">About</li></a>
                 <a href ="#footer"><li class="nav_link">Contact</li></a>
             </ul>
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const username = document.querySelector(".username");
     if (userid) {
         profile.innerHTML = `
-        <a href="/profile"><img src="../static/images/profile-logo-active.png" alt="avatar" class="avatar"/></a>`
+        <a href="/profile"><img src="../static/images/image-avatar.png" alt="avatar" class="avatar"/></a>`
         // cart
         fetch(`https://fashionalx.me/api/users/${userid}/cart`)
         .then(response => {
@@ -144,20 +144,9 @@ document.addEventListener("DOMContentLoaded", function() {
         .catch(error => {
             console.log(error)
         });
-        //usenname
-        fetch(`https://fashionalx.me/api/users/${userid}`)
-        .then(response => {
-            return response.json();
-        })
-        .then(user => {
-            username.innerHTML = `${(user.first_name).toUpperCase()}<br/>${(user.last_name).toUpperCase()}`
-        })
-        .catch(error => {
-            console.log(error);
-        });
     } else {
         profile.innerHTML = `
-        <a href="/login"><img src="../static/images/profile-avatar.png" alt="avatar" class="avatar"/></a>`
+        <a href="/login"><img src="../static/images/login-logo.png" alt="avatar" class="avatar"/></a>`
     }
 
 });

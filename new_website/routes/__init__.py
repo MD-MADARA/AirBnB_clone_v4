@@ -9,3 +9,4 @@ from routes.men import *
 from routes.women import *
 from routes.about import *
 from routes.checkout import *
+from routes.payment import *

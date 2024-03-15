@@ -9,7 +9,8 @@
     height: auto;
 }
 .headings {
-    background-color: #77928F;
+    background-color: black;
+    color: #fff;
     height: 40px;
 }
 .checkout-row{
@@ -54,7 +55,7 @@
 .checkout-total {
     margin-top: 5px;
     margin-left: 55%;
-    border-top: 3px solid red;
+    border-top: 3px solid var(--Orange);
     width: 45%;
 }
 .total-row {
@@ -75,4 +76,60 @@
 }
 .relative {
     position: relative;
+}
+.buttons {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+}
+.amount-btn {
+    background-color: var(--Light-grayish-blue);
+    display: flex;
+    align-items: center;
+    width: 35%;
+    border-radius: 7px;
+    justify-content: space-around;
+    height: 40px;
+    width: 120px;
+}
+.amount-btn button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.amount {
+    font-weight: 700;
+}
+.checkout-total p {
+    font-family: 'Poppins', sans-serif;
+    color: red;
+    font-size: larger;
+    font-weight: 800;
+}
+.checkout-total h4 {
+    font-size:x-large;
+}
+.buy-now {
+    cursor: pointer;
+    width: 50%;
+    background-color: black;
+    color: white;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    font-family: inherit;
+    border: none;
+    border-radius: 7px;
+    padding: 1rem;
+    margin: 5% auto;
+    text-transform: capitalize;
+}
+.buy-now:hover{
+    opacity: 0.8;
 }

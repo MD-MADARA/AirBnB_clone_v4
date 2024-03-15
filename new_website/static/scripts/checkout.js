@@ -1,9 +1,39 @@
+var totalVAlue = document.querySelector(".total-value");
+
+
+function handlePlus(button, price) {
+    var amountElement = button.parentNode.querySelector('.amount');
+    var amount = parseInt(amountElement.innerText);
+    if (amount < 10) {
+        amount++;
+        amountElement.innerText = amount;
+        let subtotal = (amount * price).toFixed(2)
+        var sub = button.parentNode.parentNode.parentNode.parentNode.querySelector(".sub");
+        sub.innerHTML = `<b>$${subtotal}</b>`
+        totalVAlue.innerText = (parseFloat(totalVAlue.innerText) + price).toFixed(2);
+    }
+}
+
+function handleMinus(button, price) {
+    var amountElement = button.parentNode.querySelector('.amount');
+    var amount = parseInt(amountElement.innerText);
+    if (amount > 1) {
+        amount--;
+        amountElement.innerText = amount;
+        let subtotal = (amount * price).toFixed(2)
+        var sub = button.parentNode.parentNode.parentNode.parentNode.querySelector(".sub");
+        sub.innerHTML = `<b>$${subtotal}</b>`
+        totalVAlue.innerText = (parseFloat(totalVAlue.innerText) - price).toFixed(2);
+    }
+}
+
+
 function createProductRow(product) {
+    
     new_price = product.price - product.price * (product.discount / 100);
-    let amountValue = 1;
-    let total = new_price * amountValue;
+    totalVAlue.innerText = (parseFloat(totalVAlue.innerText) + new_price).toFixed(2);
     var productRow = document.createElement('div');
-    productRow.classList.add('checkout-row', 'Products')
+    productRow.classList.add('checkout-row', 'Products');
     productRow.innerHTML = `
     <div class="checkout-column col1 prod-column">
         <div class="product-card">
@@ -11,28 +41,31 @@ function createProductRow(product) {
                 
         <div class="product-info">
             <p class="product-title">${product.title}</p>
-        <p><span>$${new_price.toFixed(2)}</span> × <span class="number">${amountValue}</span> <b>$${total.toFixed(2)}</b></p>
+        <p><span><b>$${new_price.toFixed(2)}</b></span>
         </div>
         </div>
     </div>
     <div class="checkout-column col2">
         <div class="buttons" style="width: 100%">
             <div class="amount-btn">
-            <button id="minus">
+            <button id="minus" onclick="handleMinus(this, ${new_price.toFixed(2)})">
                 <img src="../static/images/icon-minus.svg" alt="minus" />
             </button>
-            <p class="amount">0</p>
-            <button id="plus">
+            <p class="amount">1</p>
+            <button id="plus" onclick="handlePlus(this, ${new_price.toFixed(2)})">
                 <img src="../static/images/icon-plus.svg" alt="plus" />
             </button>
             </div>
         </div>
     </div>
     <div class="checkout-column col3">
-        <h3>Subtotal</h3>
+        <p class="sub">
+            <b>$${new_price.toFixed(2)}</b>
+        </p>
     </div>`
-    let checkoutContainer = document.querySelector(".checkout-container")
-    checkoutContainer.appendChild(productRow)
+    let checkoutContainer = document.querySelector(".checkout-container");
+    checkoutContainer.appendChild(productRow);
+
 }
 document.addEventListener("DOMContentLoaded", function() {
     const userid = localStorage.getItem('id');
@@ -45,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
             document.querySelector(".checkout-section").innerHTML = `
             <div class="emty_cart_img"></div>
             `
-            document.querySelector(".checkout-section").classList.add("relative")
+            document.querySelector(".checkout-section").classList.add("relative");
         } else {
             data.forEach(product => {
                 createProductRow(product);
@@ -56,4 +89,9 @@ document.addEventListener("DOMContentLoaded", function() {
       console.error('There was a problem with the fetch operation:', error);
       document.getElementById('result').textContent = 'Error: ' + error;
     });
+    const buyNow = document.querySelector(".buy-now");
+    buyNow.addEventListener('click', () =>{
+        window.location.replace('/payment');
+    })
+
 });

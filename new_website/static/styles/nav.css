@@ -74,7 +74,7 @@ nav.sticky {
   bottom: -35px;
   border-radius: 10px;
   display: block;
-  background-color: crimson;
+  background-color: var(--Orange);
   width: 100%;
   height: 5px;
 }
@@ -92,7 +92,7 @@ nav.sticky {
   margin: 1rem 0;
 }
 .avatar:hover {
-  outline: 2px solid crimson;
+  outline: 2px solid var(--Orange);
   border-radius: 50%;
 }
 .cart:hover {
@@ -103,7 +103,7 @@ nav.sticky {
   border: none;
 }
 .indicator {
-  background-color: crimson;
+  background-color: var(--Orange);
   padding: 0.2rem 0.5rem;
   border-radius: 50%;
   color: var(--White);

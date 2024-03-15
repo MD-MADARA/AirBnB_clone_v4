@@ -7,7 +7,39 @@
 a{
   text-decoration: none;
 }
-
+.about-page-heading {
+  margin-top: 150px;
+  background-image: url(../images/about-us-page-heading.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 98vw;
+  height: 52vh;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.heading-text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.heading-text h2{
+  color: #fff;
+  font-size: 60px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 10px;
+}
+.heading-text p {
+  color: #fff;
+  font-style: italic;
+  font-size: large;
+  
+}
 #team{
   width: 100%;
   min-height: 100vh;
@@ -17,7 +49,6 @@ a{
   flex-direction: column;
   font-family: "Poppins", sans-serif;
   background-color: #f8f8f8;
-  margin-top: 85px;
 }
 
 #team .heading {

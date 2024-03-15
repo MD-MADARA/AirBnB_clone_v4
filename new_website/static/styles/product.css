@@ -208,7 +208,7 @@ main {
   }
   .size-option input[type="radio"]:checked + label {
     color: #fff;
-    background-color: #E6EE9C;
+    background-color: var(--Orange);
   }
 
   .size-option:hover {
