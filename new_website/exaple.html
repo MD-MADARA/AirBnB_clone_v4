@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radio Input Example</title>
+</head>
+<body>
+    <form>
+        <input type="radio" id="option1" name="options" value="option1">
+        <label for="option1">Option 1</label>
+        <br>
+        <input type="radio" id="option2" name="options" value="option2">
+        <label for="option2">Option 2</label>
+    </form>
+  <script>
+    // Get all radio inputs
+    const radioInputs = document.querySelectorAll('input[type="radio"]');
+
+    // Function to handle radio input click
+    function handleRadioClick(event) {
+    // Get the value of the selected radio input
+    const selectedValue = event.target.value;
+    
+    // Display the selected value (this is just an example, you can do whatever you want with the value)
+    console.log("Selected value:", selectedValue);
+    }
+
+    // Loop through each radio input and attach a click event listener
+    radioInputs.forEach(input => {
+    input.addEventListener('click', handleRadioClick);
+    });
+  </script>
+</body>
+</html>

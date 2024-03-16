@@ -29,7 +29,11 @@ body {
 	letter-spacing:1px;
 	clear:both;
 }
-
+.checklist form{
+	font-size:14px;
+	font-weight:400;
+	padding: 7px 0 7px 0;
+}
 .checklist ul li{
 	font-size:14px;
 	font-weight:400;
@@ -45,14 +49,14 @@ body {
 	border: 1px solid #d1d3d7;
 	position:relative;
 }
-.sizes li span, .categories .sizes li{
+.sizes li span, .categories .sizes li, input, label{
 	-webkit-transition: all 300ms ease-out;
 	   -moz-transition: all 300ms ease-out;
 	    -ms-transition: all 300ms ease-out;
 	     -o-transition: all 300ms ease-out;
 	        transition: all 300ms ease-out;
 }
-.checklist li a{
+.checklist li a, input, label{
 	color:#676a74;
 	text-decoration:none;
 	-webkit-transition: all 300ms ease-out;
@@ -61,7 +65,10 @@ body {
 	     -o-transition: all 300ms ease-out;
 	        transition: all 300ms ease-out;
 }
-.checklist li a:hover{
+.checklist li a:hover,
+input:hover,
+label:hover {
+	cursor: pointer;
 	color:#222;
 	-webkit-transition: all 300ms ease-out;
 	   -moz-transition: all 300ms ease-out;

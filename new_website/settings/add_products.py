@@ -219,3 +219,16 @@ for i in range(81):
     }
     new = Product(**data)
     new.save()
+
+# 47 Men Sweater
+for i in range(47):
+    data = {
+        "title": generate_mens_sweater_title(),
+        "price": fake.pyfloat(min_value=5, max_value=60, right_digits=2),
+        "description": fake.text(),
+        "discount": fake.random_int(min=25, max=65),
+        "category_name": "Sweater",
+        "category_type": "Men",
+    }
+    new = Product(**data)
+    new.save()

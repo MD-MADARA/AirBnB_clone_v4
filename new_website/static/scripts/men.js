@@ -22,20 +22,62 @@ function createProductDiv(product) {
       `;
       document.querySelector('.products').appendChild(productDiv);
   }
-  
-fetch('https://fashionalx.me/api/products?category_type=Men&order_desc=id')
-.then(response => {
-  if (!response.ok) {
-    throw new Error('Network response was not ok');
-  }
-  return response.json();
-})
-.then(data => {
-  data.forEach(product => {
-    createProductDiv(product);
+
+const caregories = ["Suit", "Sweater", "Hoodie", "T-shirt", "Jeans"]
+caregories.forEach(category => {
+  fetch(`https://fashionalx.me/api/products?category_type=Men&order_desc=id&category_name=${category}&limit=5`)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    data.forEach(product => {
+      createProductDiv(product);
+    });
+  })
+  .catch(error => {
+    console.error('There was a problem with the fetch operation:', error);
+    document.getElementById('result').textContent = 'Error: ' + error;
   });
-})
-.catch(error => {
-  console.error('There was a problem with the fetch operation:', error);
-  document.getElementById('result').textContent = 'Error: ' + error;
+});
+
+// Function to handle radio input click
+function handleRadioClick(event) {
+  const category_name = event.target.value;
+  var products = document.querySelector('.products');
+  while (products.firstChild) {
+    products.removeChild(products.firstChild);
+  }
+
+  fetch(`https://fashionalx.me/api/products?category_type=Men&order_desc=id&category_name=${category_name}`)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    data.forEach(product => {
+      createProductDiv(product);
+    });
+  })
+  .catch(error => {
+    console.error('There was a problem with the fetch operation:', error);
+    document.getElementById('result').textContent = 'Error: ' + error;
+  });
+  }
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const radioInputs = document.querySelectorAll('input[type="radio"]');
+  
+  radioInputs.forEach(input => {
+  input.addEventListener('click', handleRadioClick);
+  });
+
 });
