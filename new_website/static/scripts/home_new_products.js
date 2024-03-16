@@ -24,7 +24,7 @@ function createProductDiv(product) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-  const categories = ["Sweater", "Jeans", "T-shirt", "Suit", "Dress"]
+  const categories = ["Sweater", "Jeans", "T-shirt", "Suit", "Dress", "Hoodie"]
   categories.forEach(category => {
     const types = ["Men", "Women"]
     types.forEach(type => {

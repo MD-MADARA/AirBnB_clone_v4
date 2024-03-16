@@ -232,3 +232,16 @@ for i in range(47):
     }
     new = Product(**data)
     new.save()
+
+# 64 Women hoodie
+for i in range(64):
+    data = {
+        "title": generate_mens_hoodie_title(),
+        "price": fake.pyfloat(min_value=20, max_value=60, right_digits=2),
+        "description": fake.text(),
+        "discount": fake.random_int(min=30, max=75),
+        "category_name": "Hoodie",
+        "category_type": "Women",
+    }
+    new = Product(**data)
+    new.save()

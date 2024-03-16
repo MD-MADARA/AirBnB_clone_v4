@@ -23,7 +23,7 @@ function createProductDiv(product) {
       document.querySelector('.products').appendChild(productDiv);
 }
 
-const caregories = ["Suit", "Sweater", "Dress", "T-shirt", "Jeans"]
+const caregories = ["Suit", "Sweater", "Dress", "T-shirt", "Jeans", "Hoodie"]
 caregories.forEach(category => {
   fetch(`https://fashionalx.me/api/products?category_type=Women&order_desc=id&category_name=${category}&limit=5`)
   .then(response => {
@@ -68,10 +68,6 @@ function handleRadioClick(event) {
     document.getElementById('result').textContent = 'Error: ' + error;
   });
   }
-
-
-
-
 
 document.addEventListener("DOMContentLoaded", function() {
   const radioInputs = document.querySelectorAll('input[type="radio"]');
